@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You, Didi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Dancing+Script&display=swap" rel="stylesheet">
+
+<style>
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #f6e9ec, #fdf6f0) !important;
+}
+
+/* ---------- VIDEO SECTION ---------- */
+#videoSection {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+video {
+  width: 70%;
+  max-width: 800px;
+  border-radius: 18px;
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.25),
+    0 0 80px rgba(183,110,121,0.25);
+}
+
+#continueBtn {
+  margin-top: 30px;
+  padding: 12px 36px;
+  font-size: 16px;
+  border: none;
+  background: #b76e79;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* ---------- APOLOGY SECTION ---------- */
+#apologySection {
+  display: none;
+  padding: 80px 40px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ---------- PHOTO FILM STRIP ---------- */
+.film {
+  background: #000;
+  padding: 12px;
+  border-radius: 14px;
+}
+
+.film img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+/* ---------- LETTER ---------- */
+.letter {
+  background: white;
+  padding: 60px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 52px;
+  color: #b76e79;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+.signature {
+  margin-top: 40px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  color: #b76e79;
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO VIDEO -->
+<div id="videoSection">
+  <video id="introVideo" muted playsinline controls>
+    <source src="intro.mp4" type="video/mp4">
+  </video>
+  <button id="continueBtn" onclick="showApology()">Continue</button>
+</div>
+
+<!-- APOLOGY CONTENT -->
+<div id="apologySection">
+  <div class="wrapper">
+
+    <!-- LEFT SIDE PHOTOS -->
+    <div class="film">
+      <img src="photo2.jpg">
+      <img src="photo3.jpg">
+      <img src="photo4.jpg">
+    </div>
+
+    <!-- RIGHT SIDE LETTER -->
+    <div class="letter">
+      <h1>I’m Sorry, Didi</h1>
+
+      <p>
+        Dear Didi,<br><br>
+        Mujhe pata hai maine galti ki.
+        i've done such a big blunder ki mjhe itnaaa jyadaaaa  guilt hora h 
+i cant even express i'm sorry 
+jitna apologise kru utna kam h :(
+mjhe bhoot jyada guilt hora h 
+i am really really very sorry didi
+i should not have have whatever i have done, i've realised
+i am sorry 
+      </p>
+
+      <p>
+        sach m didi hamara bond sabse alg hi h.
+kuch bhi ho jo apna pan hmare bich h vo to kahin nhi hi h
+        Aap aur Kavya mere liye bhoot important ho,
+        aur main nahi chahti ki
+        badon ke beech ke issues
+        hum bachchon ke beech doori banayein.
+i completely agree to your point.
+      </p>
+
+      <p>
+        i am really really very sorry, please forgive me 🥺
+      </p>
+
+      <div class="signature">
+        with tonnes, barrels, and titanic of Love ❤️,<br>
+        chandi devi
+        nani maa
+        vani 
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const video = document.getElementById("introVideo");
+const btn = document.getElementById("continueBtn");
+
+  btn.style.display = "block";
+};
+
+function showApology() {
+  document.getElementById("videoSection").style.display = "none";
+  document.getElementById("apologySection").style.display = "block";
+}
+</script>
+
+</body>
+</html>
